@@ -1,20 +1,20 @@
-<h1><% if current_user %>
-  Welcome <%= current_user.name %>!
+<h1><% if current_user %></h1>
+  Welcome <%= current_user.name %>
   <%= link_to "Sign Out", signout_path %>
+  
+  <div id="posts">
+  <%= render :partial => "message_form" %>
+  </div>
+
+  <b><div id='message'></b>
+    <%= render :partial => @posts %> 
+  <b></div></b> 
+  
 <% else %>
   <h2> Sign In With Twitter</h2>
   <a href="/auth/twitter" class="auth_provider">
     <%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %>
   </a>
 <% end %>
-</h1>
-
-<div id="posts">
-<%= render :partial => "message_form" %>
-</div>
-
-<b><div id='message'></b>
-  <%= render :partial => @posts %> 
-<b></div></b> 
 
 
