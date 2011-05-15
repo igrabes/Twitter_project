@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.5'
 gem 'omniauth'
 gem 'nifty-generators', :group => :development
+gem 'twitter'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
