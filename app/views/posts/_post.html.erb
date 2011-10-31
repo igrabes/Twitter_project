@@ -1,7 +1,7 @@
 <% div_for post do %>
 
   <p><b>Posted <%= time_ago_in_words(post.created_at) %> ago</b>
-</p>  
+</p>
   <p><%= post.message %></p>
   <p><%= link_to "Destroy", post , :confirm => "Are you sure?", :method => :delete %></p>
 <% end %>

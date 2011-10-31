@@ -19,7 +19,7 @@ class PostsController < ApplicationController
       end
     end
   end
-  
+
   def destroy
      @post = Post.destroy(params[:id])
      flash[:notice] = "Your message has been successfully deleted"
