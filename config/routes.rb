@@ -1,12 +1,12 @@
 Twitter1::Application.routes.draw do
-  
+
   root :to => "posts#index"
-  
+
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   resources :posts
-  
-  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
